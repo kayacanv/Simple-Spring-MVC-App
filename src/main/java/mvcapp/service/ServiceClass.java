@@ -31,12 +31,9 @@ public class ServiceClass {
 		}
 		return res;
 	}
-	public int Write_Comments(Comments_List List)
+	public int Write_Comments(Comments_List List,String filePath)
 		throws IOException{
-
-		String fileName = "Output.txt";
-
-		BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
+		BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
 		int first=0;
 		for (String it: List.getComments()) {
 			if(first==1)

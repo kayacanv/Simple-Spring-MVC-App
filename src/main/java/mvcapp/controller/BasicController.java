@@ -17,18 +17,18 @@ public class BasicController {
 
 	@RequestMapping("/")
 	public String index() {
-		return "Greetings from Spring Boot!";
+		return "Greetings, please enter to /getComments.";
 	}
 
 	@RequestMapping("/getComments")
 	public String getComments() {
-		Comments_List list = service.Fetch_Comments("https://my-json-server.typicode.com/typicode/demo/comments");
 		try {
-			service.Write_Comments(list);
+			service.Write_Comments(service.Fetch_Comments("https://my-json-server.typicode.com/typicode/demo/comments"),"./comments_output.txt");
 		} catch (IOException e) {
 			System.out.println("Exception Raised service.Write_Comments");
 			e.printStackTrace();
+			return "Some Error Happened";
 		}
-		return "Get Coments!";
+		return "Comments Are Successfully ADDED!";
 	}
 }
