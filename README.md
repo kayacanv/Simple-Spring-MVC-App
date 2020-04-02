@@ -1,6 +1,6 @@
 # Simple-Spring-MVC-App-
 
-##Usage
+## Usage
 
 ```
 ./mvnw clean install
