@@ -1,7 +1,6 @@
 package mvcapp.model;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class Comments_List {
   private class Comment{
@@ -37,6 +36,13 @@ public class Comments_List {
     ArrayList<String> res = new ArrayList<String>();
     for(int i=0;i<List.size();i++)
       res.add(List.get(i).getComment());
+    return res;
+  }
+  public ArrayList<Integer> getIds()
+  {
+    ArrayList<Integer> res = new ArrayList<Integer>();
+    for(int i=0;i<List.size();i++)
+      res.add(List.get(i).getId());
     return res;
   }
 }

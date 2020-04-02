@@ -1,7 +1,3 @@
-/.gradle
-/mvn
-/.mvn
-/.vscode
+.*
 /target
-/Output.txt
-/.mvn
+Output.txt
