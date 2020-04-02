@@ -1,4 +1,5 @@
 .*
+!.mvn
 /target
 Output.txt
 temporary_test.txt
