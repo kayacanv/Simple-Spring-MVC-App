@@ -1,3 +1,5 @@
 .*
 /target
 Output.txt
+temporary_test.txt
+comments_output.txt
